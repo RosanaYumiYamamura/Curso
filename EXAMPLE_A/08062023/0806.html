@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cajita HTML</title>
+  <script>
+    function handleChange() {
+      var nameInput = document.getElementById('nameInput');
+      var spanWelcome = document.getElementById('spanWelcome');
+      spanWelcome.textContent = nameInput.value;
+    }
+  </script>
+</head>
+<body>
+  <input type="text" id="nameInput" placeholder="Ingresa tu nombre" oninput="handleChange()">
+  <div><br>
+    Bienvenida/o 
+    <span id="spanWelcome"></span>
+  </div>
+</body>
+</html>

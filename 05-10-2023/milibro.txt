@@ -1,0 +1,8 @@
+El Principito|Antoine de Saint-Exupéry|Editorial XYZ|1943
+Alicia en el País de las Maravillas|Lewis Carroll|Editorial ABC|1865
+El Gato con Botas|Charles Perrault|Editorial DEF|1697
+Caperucita Roja|Charles Perrault|Editorial GHI|1697
+El Grúfalo|Julia Donaldson|Editorial JKL|1999
+Winnie the Pooh|A.A. Milne|Editorial MNO|1926
+La Oruga Muy Hambrienta|Eric Carle|Editorial PQR|1969
+Donde Viven los Monstruos|Maurice Sendak|Editorial STU|1963

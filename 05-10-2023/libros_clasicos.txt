@@ -1,0 +1,10 @@
+Don Quijote de la Mancha|Miguel de Cervantes Saavedra|Editorial XYZ|1605
+Matar un ruiseñor|Harper Lee|Editorial ABC|1960
+Crimen y castigo|Fyodor Dostoevsky|Editorial DEF|1866
+Orgullo y prejuicio | Jane Austen | Editorial GHI|1813
+Ulises|James Joyce|Editorial JKL|1922
+En busca del tiempo perdido|Marcel Proust|Editorial MNO|1913
+Cien años de soledad|Gabriel García Márquez|Editorial PQR|1967
+Hamlet|William Shakespeare|Editorial STU|1603
+La Odisea|Homer|Editorial VWX|Siglo VIII a.C.
+La Metamorfosis|Franz Kafka|Editorial YZ|1915

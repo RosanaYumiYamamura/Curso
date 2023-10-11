@@ -1,0 +1,34 @@
+Don Quijote de la Mancha|Miguel de Cervantes Saavedra|Editorial XYZ|1605
+Matar un ruiseñor|Harper Lee|Editorial ABC|1960
+Crimen y castigo|Fyodor Dostoevsky|Editorial DEF|1866
+Orgullo y prejuicio|Jane Austen|Editorial GHI|1813
+Ulises|James Joyce|Editorial JKL|1922
+En busca del tiempo perdido|Marcel Proust|Editorial MNO|1913
+Cien años de soledad|Gabriel García Márquez|Editorial PQR|1967
+Hamlet|William Shakespeare|Editorial STU|1603
+La Odisea|Homer|Editorial VWX|Siglo VIII a.C.
+La Metamorfosis|Franz Kafka|Editorial YZ|1915
+-----------------------
+National Geographic|National Geographic Society|Editorial XYZ|1888
+Time|Time Magazine|Editorial ABC|1923
+The New Yorker|Condé Nast|Editorial DEF|1925
+Vogue|Condé Nast|Editorial GHI|1892
+Scientific American|Springer Nature|Editorial JKL|1845
+Harvard Business Review|Harvard University|Editorial MNO|1922
+Rolling Stone|Wenner Media|Editorial PQR|1967
+Smithsonian|Smithsonian Institution|Editorial STU|1970
+Nature|Springer Nature|Editorial VWX|1869
+The Economist|The Economist Group|Editorial YZ|1843
+------------------------
+Cenicienta|Charles Perrault|Editorial XYZ|1697
+El patito feo|Hans Christian Andersen|Editorial ABC|1843
+Alicia en el país de las maravillas|Lewis Carroll|Editorial DEF|1865
+Blancanieves|Hermanos Grimm|Editorial GHI|1812
+Peter Pan|J.M. Barrie|Editorial JKL|1904
+Pinocho|Carlo Collodi|Editorial MNO|1883
+El libro de la selva|Rudyard Kipling|Editorial PQR|1894
+Hansel y Gretel|Hermanos Grimm|Editorial STU|1812
+La sirenita|Hans Christian Andersen|Editorial VWX|1837
+La bella durmiente|Charles Perrault|Editorial YZ|1697
+
+

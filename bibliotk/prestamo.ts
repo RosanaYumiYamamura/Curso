@@ -1,0 +1,1 @@
+import { Usuario, Libro, Prestamo } from './biblioteca';

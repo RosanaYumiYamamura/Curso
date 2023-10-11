@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "titulo": "Don Quijote de la Mancha",
+    "autor": "Miguel de Cervantes Saavedra",
+    "editorial": "Editorial XYZ",
+    "año": 1605,
+    "estado": "prestado",
+    "prestadoA": "Camilo"
+  },
+  {
+    "id": 2,
+    "titulo": "Matar un ruiseñor",
+    "autor": "Harper Lee",
+    "editorial": "Editorial ABC",
+    "año": 1960,
+    "estado": "prestado",
+    "prestadoA": "Jorgelina"
+  },
+  {
+    "id": 3,
+    "titulo": "Crimen y castigo",
+    "autor": "Fyodor Dostoevsky",
+    "editorial": "Editorial DEF",
+    "año": 1866,
+    "estado": "disponible"
+  },
+  {
+    "id": 4,
+    "titulo": "Orgullo y prejuicio",
+    "autor": "Jane Austen",
+    "editorial": "Editorial GHI",
+    "año": 1813,
+    "estado": "prestado",
+    "prestadoA": "Rosalia"
+  },
+  {
+    "id": 5,
+    "titulo": "Ulises",
+    "autor": "James Joyce",
+    "editorial": "Editorial JKL",
+    "año": 1922,
+    "estado": "disponible"
+  },
+  {
+    "titulo": "El Principito"
+  },
+  {
+    "titulo": "El Principito"
+  },
+  {
+    "id": "6",
+    "titulo": "El princiito",
+    "autor": "Antoine de Saint-Exupéry",
+    "editorial": "Editorial Salamandra.",
+    "año": "1943",
+    "estado": "disponible"
+  },
+  {
+    "id": "20",
+    "titulo": "Los cuantos de Andersen",
+    "autor": "Christensen",
+    "editorial": "Estrada",
+    "año": "1980",
+    "estado": "disponible"
+  },
+  {
+    "id": "3",
+    "titulo": "La Metamorfosis",
+    "autor": "Franz Kafka",
+    "editorial": "Editorial YZ",
+    "año": "1915",
+    "estado": "prestado",
+    "prestadoA": "Susanita"
+  },
+  {
+    "id": "19",
+    "titulo": "Maria Castañeta",
+    "autor": "Jorge Martinez",
+    "editorial": "Estrada",
+    "año": "2023",
+    "estado": "prestado",
+    "prestadoA": "Milei"
+  },
+  {
+    "id": "097",
+    "titulo": "Blancanieves",
+    "autor": "XXX",
+    "editorial": "Estrada",
+    "año": "1980",
+    "estado": "prestado",
+    "prestadoA": "Xipolatis"
+  },
+  {
+    "id": "1",
+    "titulo": "2",
+    "autor": "3",
+    "editorial": "4",
+    "año": "5",
+    "estado": "disponible"
+  },
+  {
+    "id": "2345670987654",
+    "titulo": "Ali baba y los 40 ladrones",
+    "autor": "Desconocido",
+    "editorial": "Estrada",
+    "año": "1980",
+    "estado": "disponible"
+  }
+]

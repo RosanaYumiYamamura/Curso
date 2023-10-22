@@ -1,0 +1,20 @@
+
+#products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+
+}
+
+article {
+    padding: 1rem;
+    box-shadow: 3px 3px 6px;
+    border-radius: 7px;
+    text-align: center;
+    width: 320px ;
+}
+
+article img {
+    width: 60%;
+}

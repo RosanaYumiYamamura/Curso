@@ -14,75 +14,72 @@ const rl = readline.createInterface({
 
 //----------PACIENTE----------------
 function cargarPaciente() {
-    try {
-      const data = fs.readFileSync(pacienteFile, 'utf8');
-      return JSON.parse(data);
-    } catch (error) {
-      return [];
-    }
+  try {
+    const data = fs.readFileSync(pacienteFile, 'utf8');
+    return JSON.parse(data);
+  } catch (error) {
+    return [];
   }
-  
-  function guardarPaciente(paciente) {
-    fs.writeFileSync(pacienteFile, JSON.stringify(paciente, null, 2), 'utf8');
-  }
-  
-  function registrarPaciente() {
-    rl.question('Nombre / padecimiento del paciente: ', (Nombre_Padecimiento) => {
-      const paciente = cargarPaciente();
-      paciente.push({ Nombre_Padecimiento });
+}
+
+function guardarPaciente(paciente) {
+  fs.writeFileSync(pacienteFile, JSON.stringify(paciente, null, 2), 'utf8');
+}
+
+function registrarPaciente() {
+  rl.question(' Nombre / Padecimiento: ', (Nombre_Padecimiento) => {
+    const paciente = cargarPaciente();
+    paciente.push({ Nombre_Padecimiento });
+    guardarPaciente(paciente);
+    console.log(`paciente ${Nombre_Padecimiento} registrado exitosamente.`);
+    menuPrincipal();
+  });
+}
+
+// ---  borrar paciente ---
+function borrarPaciente() {
+  rl.question('Nombre / Padecimiento del paciente a borrar: ', (Nombre_Padecimiento) => {
+    const paciente = cargarPaciente();
+    const indice = paciente.findIndex((c) => c.Nombre_Padecimiento === Nombre_Padecimiento);
+    if (indice !== -1) {
+      paciente.splice(indice, 1);
       guardarPaciente(paciente);
-      console.log(`Paciente ${Nombre_Padecimiento} registrado exitosamente.`);
-      menuPrincipal();
-    });
-  }
-  
-  function borrarPaciente() {
-    rl.question('Nombre del paciente a borrar: ', (Nombre_Padecimiento) => {
-      const paciente = cargarCliente();
-      const indice = paciente.findIndex((c) => c.Nombre_Padecimiento === Nombre_Padecimiento);
-      if (indice !== -1) {
-        paciente.splice(indice, 1);
+      console.log(`paciente ${Nombre_Padecimiento} ha sido eliminado.`);
+    } else {
+      console.log(`No se encontró el paciente ${Nombre_Padecimiento}.`);
+    }
+    menuPrincipal();
+  });
+}
+
+// ---  modificar paciente por nombre ---
+function modificarPaciente() {
+  rl.question('Nombre / Padecimiento del paciente a modificar: ', (Nombre_Padecimiento) => {
+    const paciente = cargarPaciente();
+    const indice = paciente.findIndex((c) => c.Nombre_Padecimiento === Nombre_Padecimiento);
+    if (indice !== -1) {
+      rl.question('Nuevo Nombre / Padecimiento: ', (nuevoNombre_Padecimiento) => {
+        cliente[indice].Nombre_Padecimiento = nuevoNombre_Padecimiento;
         guardarPaciente(paciente);
-        console.log(`Paciente ${Nombre_Padecimiento} ha sido eliminado.`);
-      } else {
-        console.log(`No se encontró el paciente ${Nombre_Padecimiento}.`);
-      }
-      menuPrincipal();
-    });
-  }
-  
-  function modificarPaciente() {
-    rl.question('Nombre del paciente a modificar: ', (Nombre_Padecimiento) => {
-      const paciente = cargarPaciente();
-      const indice = paciente.findIndex((c) => c.Nombre_Padecimiento === Nombre_Padecimiento);
-      if (indice !== -1) {
-        rl.question('Nuevo Nombre_Padecimiento: ', (nuevoNombre_Padecimiento) => {
-          cliente[indice].Nombre_Padecimiento = nuevoNombre_Padecimiento;
-          guardarPaciente(paciente);
-          console.log(`Paciente ${Nombre_Padecimiento} ha sido modificado a ${nuevoNombre_Padecimiento}.`);
-          menuPrincipal();
-        });
-      } else {
-        console.log(`No se encontró el paciente ${Nombre_Padecimiento}.`);
+        console.log(`Paciente ${Nombre_Padecimiento} ha sido modificado a ${nuevoNombre_Padecimiento}.`);
         menuPrincipal();
-      }
-    });
-  }
-  
-  // --- Agregar función para listar paciente ---
-  function listarPaciente() {
-      const paciente = cargarPaciente();
-      console.log('Lista de Paciente:');
-      paciente.forEach((paciente, index) => {
-        console.log(`${index + 1}. ${paciente.Nombre_Padecimiento}`);
       });
+    } else {
+      console.log(`No se encontró el paciente ${Nombre_Padecimiento}.`);
       menuPrincipal();
     }
+  });
+}
 
-
-
-
-
+// --- Agregar función para listar paciente ---
+function listarPaciente() {
+    const paciente = cargarPaciente();
+    console.log('Lista de paciente:');
+    paciente.forEach((paciente, index) => {
+      console.log(`${index + 1}. ${paciente.Nombre_Padecimiento}`);
+    });
+    menuPrincipal();
+  }
 //--------FIN PACIENTE---------------
 
 //------------CLIENTE-----------------------------
@@ -198,11 +195,11 @@ function borrarProveedor() {
 }
 // --- modificar proveedor por nombre ---
 function modificarProveedor() {
-    rl.question('Apellido y Nombre del proveedor a modificar: ', (Apellido_Nombre) => {
+    rl.question('Apellido y Nombre / Telefono del proveedor a modificar: ', (Apellido_Nombre) => {
       const proveedor = cargarProveedor();
       const indice = proveedor.findIndex((p) => p.Apellido_Nombre === Apellido_Nombre);
       if (indice !== -1) {
-        rl.question('Nuevo Apellido y Nombre: ', (nuevoApellido_Nombre) => {
+        rl.question('Nuevo Apellido y Nombre / Telefono del proveedor: ', (nuevoApellido_Nombre) => {
           proveedor[indice].Apellido_Nombre = nuevoApellido_Nombre;
           guardarProveedor(proveedor);
           console.log(`Proveedor ${Apellido_Nombre} ha sido modificado a ${nuevoApellido_Nombre}.`);
@@ -240,7 +237,7 @@ function cargarPedido() {
   }
   
   function registrarPedido() {
-    rl.question('objeto pedido: ', (objeto_pedido) => {
+    rl.question('Objeto pedido con medidas y precio: ', (objeto_pedido) => {
       const pedido = cargarPedido();
       pedido.push({ objeto_pedido });
       guardarPedido(pedido);
@@ -297,29 +294,29 @@ function cargarPedido() {
 // --- Menú Principal ---
 
 function menuPrincipal() {
-  console.log('*******************************************');
-  console.log('*     Bienvenido a la Veterinaria         *');
-  console.log('*******************************************');
-  console.log('*                                         *');
-  console.log('*       1. Registrar Cliente              *');
-  console.log('*       2. Borrar Cliente                 *');
-  console.log('*       3. Modificar Cliente              *');
-  console.log('*       4. Lista de Cliente               *');
-  console.log('*       5. Registrar Proveedor            *');
-  console.log('*       6. Borrar Proveedor               *');
-  console.log('*       7. Modificar Proveedor            *');
-  console.log('*       8. Lista de Proveedor             *');
-  console.log('*       9. Registrar Pedido               *');
-  console.log('*       10. Borrar el pedido              *');
-  console.log('*       11. Modificar el pedido           *');
-  console.log('*       12. Lista de pedido               *');
-  console.log('*       13. Registrar paciente            *');
-  console.log('*       14. Borrar paciente               *');
-  console.log('*       15. Modificar paciente            *');
-  console.log('*       17. Lista de paciente             *');
-  console.log('*       18. Salir                         *');
-  console.log('*                                         *');
-  console.log('*******************************************');
+  console.log('**************************************************');
+  console.log('*         Bienvenido a la Veterinaria            *');
+  console.log('**************************************************');
+  console.log('*                                                *');
+  console.log('*         1. Registrar Cliente                   *');
+  console.log('*         2. Borrar Cliente                      *');
+  console.log('*         3. Modificar Cliente                   *');
+  console.log('*         4. Lista de Cliente                    *');
+  console.log('*         5. Registrar Proveedor                 *');
+  console.log('*         6. Borrar Proveedor                    *');
+  console.log('*         7. Modificar Proveedor                 *');
+  console.log('*         8. Lista de Proveedor                  *');
+  console.log('*         9. Registrar Pedido                    *');
+  console.log('*         10. Borrar el pedido                   *');
+  console.log('*         11. Modificar el pedido                *');
+  console.log('*         12. Lista de pedido                    *');
+  console.log('*         13. Registrar paciente / Padecimiento  *');
+  console.log('*         14. Borrar paciente                    *');
+  console.log('*         15. Modificar paciente                 *');
+  console.log('*         16. Lista de paciente                  *');
+  console.log('*         17. Salir                              *');
+  console.log('*                                                *');
+  console.log('**************************************************');
 
   rl.question('Seleccione una opción: ', (opcion) => {
     switch (opcion) {
@@ -360,6 +357,18 @@ function menuPrincipal() {
         listarPedido();
         break;
       case '13':
+        registrarPaciente();
+        break;
+      case '14':
+        borrarPaciente();
+        break; 
+      case '15':
+        modificarPaciente();
+        break;
+      case '16':
+        listarPaciente();
+        break;
+      case '17':
         console.log('Saliendo...');
         rl.close();
         break;
@@ -370,6 +379,4 @@ function menuPrincipal() {
   });
 }
 
-// Iniciar la aplicación
-console.log('Bienvenido a la Veterinaria.');
-menuPrincipal();
+
